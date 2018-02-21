@@ -22,8 +22,9 @@
 </head>
 
 <body>
-	<embed id="demo-tiger" type="image/svg+xml" style="width: 500px; height: 500px; border:1px solid black; " src="final.svg" />
-
+	<div class = "graph-container">
+		<embed id="demo-tiger" type="image/svg+xml" style="width: 600px; height: 600px; border:1px solid black;" src="final.svg" />
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -41,7 +42,7 @@
 		, preventMouseEventsDefault: true
 		, zoomScaleSensitivity: 0.2
 		, minZoom: 0.5
-		, maxZoom: 10
+		, maxZoom: 100
 		, fit: true
 		, contain: false
 		, center: true
