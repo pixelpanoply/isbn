@@ -22,9 +22,7 @@
 </head>
 
 <body>
-	<div class = "graph-container">
-		<embed type="image/svg+xml" src="final.svg" id="my-embed"/>
-	</div>
+	<embed id="demo-tiger" type="image/svg+xml" style="width: 500px; height: 500px; border:1px solid black; " src="final.svg" />
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -32,18 +30,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
     <script>
-	document.getElementById('my-embed').addEventListener('load', function(){
-	  // Will get called after embed element was loaded
-	  	svgPanZoom(document.getElementById('my-embed'));
-		svgPanZoom('#my-embed', {
-          zoomEnabled: true,
-          controlIconsEnabled: false,
-          fit: true,
-          center: true,
-          // viewportSelector: document.getElementById('demo-tiger').querySelector('#g4') // this option will make library to misbehave. Viewport should have no transform attribute
+      // Don't use window.onLoad like this in production, because it can only listen to one function.
+      window.onload = function() {
+        svgPanZoom('#demo-tiger', {
+          zoomEnabled: true
+		, controlIconsEnabled: true
+		, panEnabled: true
+		, dblClickZoomEnabled: true
+		, mouseWheelZoomEnabled: true
+		, preventMouseEventsDefault: true
+		, zoomScaleSensitivity: 0.2
+		, minZoom: 0.5
+		, maxZoom: 10
+		, fit: true
+		, contain: false
+		, center: true
+		, refreshRate: 'auto'
         });
-	})
-	</script>
+      };
+    </script>
 </body>
 
 </html>
