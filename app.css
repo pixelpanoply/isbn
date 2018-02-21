@@ -2,11 +2,11 @@ body
 {
     font-family: 'Lato', sans-serif;
 }
-.graph-container{
+/*.graph-container{
     width: 600px;
     height: 600px;
     margin:20px auto;
-}
+}*/
 .c_hero{
     background: #414142;
     color: white;
