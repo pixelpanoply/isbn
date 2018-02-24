@@ -575,21 +575,10 @@ cursor: pointer;
 display: none;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  
-	#mainpanel{
+@media only screen
+and (max-width: 320px)
+and (max-height: 640px) {
+   	#mainpanel{
 		display: none;
 	}
-  
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  	#mainpanel{
-		display: none;
-	}  
 }
