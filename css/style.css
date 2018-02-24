@@ -577,7 +577,7 @@ display: none;
 
 @media (min-width: 481px) and (max-width: 767px) {
   
-	#attributepane{
+	#mainpanel{
 		display: none;
 	}
   
@@ -589,7 +589,7 @@ display: none;
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-  	#attributepane{
+  	#mainpanel{
 		display: none;
 	}  
 }
